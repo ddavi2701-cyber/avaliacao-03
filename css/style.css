@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f6;
+    background-image: radial-gradient(#dcdce0 20%, transparent 20%), radial-gradient(#dcdce0 20%, transparent 20%);
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
+    color: #1e1e24;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-header {
+    background-color: #1e1e24;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 6px solid #ff5964;
+    box-shadow: 0 6px 0px #000000;
+}
+
+.logo {
+    font-family: 'Bangers', cursive;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    transform: rotate(-2deg);
+}
+
+.logo span {
+    color: #ffbe0b;
+    background-color: #ff5964;
+    padding: 0.1rem 0.6rem;
+    margin-left: 0.2rem;
+    border: 3px solid #000;
+    display: inline-block;
+    box-shadow: 3px 3px 0px #000;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    border: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #000000;
+    background-color: #ffbe0b;
+    border-color: #000000;
+    box-shadow: 4px 4px 0px #ff5964;
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, rgba(255,89,100,0.9) 0%, rgba(255,190,11,0.8) 100%), 
+                no-repeat center/cover;
+    background-blend-mode: multiply;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 6px solid #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    background-color: #ffffff;
+    padding: 3rem;
+    border: 5px solid #000000;
+    box-shadow: 10px 10px 0px #1e1e24;
+    max-width: 750px;
+    transform: rotate(1deg);
+    position: relative;
+    z-index: 5;
+}
+
+.hero-content h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    color: #1e1e24;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: #4a4a5a;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.chars-left, .chars-right {
+    position: absolute;
+    bottom: 0; 
+    height: 95%;   
+    display: flex;
+    align-items: flex-end;
+    background: transparent !important; 
+    border: none !important;             
+    box-shadow: none !important;         
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.chars-left {
+    left: 40px; 
+}
+
+.chars-right {
+    right: 20px; 
+}
+
+.anime-char {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    background: transparent !important; 
+    border: none !important;             
+    box-shadow: none !important;         
+    mix-blend-mode: normal !important;   
+    
+
+    filter: drop-shadow(3px 3px 0px #000) drop-shadow(-3px -3px 0px #000); 
+    transition: transform 0.3s ease, z-index 0.1s;
+}
+
+.char-1 {
+    transform: rotate(-3deg);
+    position: relative;
+    z-index: 4; 
+}
+
+.char-2 {
+    margin-left: -70px;
+    transform: scale(0.95) rotate(2deg);
+    position: relative;
+    z-index: 3;
+}
+
+.char-3 {
+    transform: scale(0.95) rotate(-2deg);
+    position: relative;
+    z-index: 4;
+}
+
+.char-4 {
+    margin-right: -40px;
+    transform: scale(1.05) rotate(3deg);
+    position: relative;
+    z-index: 3;
+}
+
+.anime-char:hover {
+    transform: scale(1.08) translateY(-10px);
+    z-index: 10 !important;
+}
+
+.btn-primary, .btn-submit {
+    display: inline-block;
+    background-color: #ff5964;
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-family: 'Bangers', cursive;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 4px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.btn-primary:hover, .btn-submit:hover {
+    background-color: #ffbe0b;
+    color: #000000;
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.highlights, .content-wrapper {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.highlights h3, .content-wrapper h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1e1e24;
+    text-shadow: 3px 3px 0px #ffbe0b;
+}
+
+.highlights-grid, .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.highlight-card, .product-card {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    padding: 2rem;
+    box-shadow: 8px 8px 0px #000000;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-card:hover, .product-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #ff5964;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: #ffbe0b;
+    color: #000000;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0px #000000;
+    transform: rotate(-5deg);
+}
+
+.product-image-container {
+    width: 100%;
+    height: 320px;
+    border: 4px solid #000000;
+    background-color: #e2e2e8;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e1e24;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    display: inline-block;
+    background-color: #ffbe0b;
+    color: #000000;
+    padding: 0.2rem 0.8rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0px #000000;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555565;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-buy {
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border: 4px solid #000000;
+    padding: 0.8rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #000000;
+    transition: all 0.1s ease;
+}
+
+.btn-buy:hover {
+    background-color: #1e1e24;
+    color: #ffffff;
+    box-shadow: 4px 4px 0px #ff5964;
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.custom-form {
+    background-color: #ffffff;
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+    border: 5px solid #000000;
+    box-shadow: 10px 10px 0px #1e1e24;
+}
+
+.custom-form h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #1e1e24;
+    text-shadow: 
+        -2px -2px 0 #ffbe0b,  
+         2px -2px 0 #ffbe0b,
+        -2px  2px 0 #ffbe0b,
+         2px  2px 0 #ffbe0b,
+         4px  4px 0px #000000;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #1e1e24;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f4f4f6;
+    border: 4px solid #000000;
+    color: #1e1e24;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #ff5964;
+}
+
+.main-footer {
+    background-color: #1e1e24;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    font-weight: 600;
+    border-top: 6px solid #000000;
+}
+
+@media (max-width: 1150px) {
+    .chars-left, .chars-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .main-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-menu a 
+	{
+        margin: 0;
+        font-size: 0.95rem;
+	}
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+        
