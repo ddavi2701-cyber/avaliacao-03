@@ -44,6 +44,7 @@ body {
     box-shadow: 3px 3px 0px #000;
 }
 
+/* Links do Menu */
 .nav-menu a {
     color: #ffffff;
     text-decoration: none;
@@ -63,6 +64,9 @@ body {
     box-shadow: 4px 4px 0px #ff5964;
 }
 
+/* ==========================================================================
+   BANNER PRINCIPAL E CORREÇÃO DOS PERSONAGENS
+   ========================================================================== */
 .hero-banner {
     background: linear-gradient(135deg, rgba(255,89,100,0.9) 0%, rgba(255,190,11,0.8) 100%), 
                 no-repeat center/cover;
@@ -172,6 +176,9 @@ body {
     z-index: 10 !important;
 }
 
+/* ==========================================================================
+   BOTÕES E ELEMENTOS DO SEGUNDO BLOCO
+   ========================================================================== */
 .btn-primary, .btn-submit {
     display: inline-block;
     background-color: #ff5964;
@@ -414,18 +421,20 @@ body {
         font-size: 0.95rem;
 	}
 }
+      /* Alinha o texto e o ícone na mesma linha */
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 12px; /* Espaço entre o ícone e o texto */
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
+/* Controla o tamanho e o comportamento do ícone */
 .logo-icon {
-    width: 90px;
-    height: 90px;
+    width: 90px;  /* Altura ideal para acompanhar o texto */
+    height: 90px; /* Mantém a proporção quadrada */
     object-fit: contain;
 }
 
